@@ -7,6 +7,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 
 
+
 const Api="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=6f82743b4851e8b71cb17f8d769a7941&page=1";
 const SearchApi="https://api.themoviedb.org/3/search/movie?api_key=6f82743b4851e8b71cb17f8d769a7941&query="
 

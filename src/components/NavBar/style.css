@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&family=Trade+Winds&display=swap');
 
 /* ***************** navBar******* */
 
@@ -8,11 +10,13 @@
 }
 .navbar-logo 
 {
-    color: #FFFAFA !important;
+    color: #F4E97B !important;
+    
 }
 .navbar-tv
 {
-    color: #008000;
+    color: #fffaf4;
+    font-size: 1rem;
 }
 
 
@@ -20,6 +24,19 @@
 .img-fluid
 {
     margin-top: 50px;   
+
+}
+.text-light
+{
+    font-weight: 700;
+}
+
+.text-bold
+{
+    font-weight: 900 !important;
+    font-family: 'Sail';
+    color: #F4E97B !important;
+    font-size: 1.5rem;
 }
 /* .all-card
 {
@@ -31,18 +48,7 @@
      justify-content: space-evenly;
 }
 
-.card-class {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;onSubmit={handleSubmit}
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    background-color: #9eebcf;
-    width: auto;
-    margin-bottom: 20%;
-    border-radius: .5rem;
-    padding: 0 0 2% 0;
+
 } */
 
 /* body and img card */
@@ -70,6 +76,14 @@
 {
     background-color:#2F4F4F;
     width: 100%;
-
     
+    
+}
+.text-size
+{
+    font-size: 2rem;
+}
+.text-size-tv
+{
+    font-size: 1.5rem;
 }

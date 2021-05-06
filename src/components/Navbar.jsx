@@ -17,8 +17,8 @@ const Navbar = ({handleSubmit, onSearch, search}) => {
       </nav> */}
       <nav class="navbar navbar-light bg-navBar fixed-top">
   <div class="container-fluid">
-    <strong class="navbar-brand text-light">
-    TangilaFilm.<span className="navbar-tv">TV</span>
+    <strong class="navbar-brand text-light text-bold">
+    TangilaFilm.<span className="navbar-tv">Tv</span>
     </strong>
     <Form handleSubmit={handleSubmit} onSearch={onSearch} search={search} className="navbar-form"/>
   </div>
