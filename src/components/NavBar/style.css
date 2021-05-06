@@ -1,7 +1,7 @@
 
 /* ***************** navBar******* */
 
-.bg-navBar
+.bg-navBar 
 {
     background-color:#2F4F4F;
     width: 100%;
@@ -63,4 +63,13 @@
 .card
 {
     border: none !important;
+    box-shadow: 0 0 8px 3px #110102 !important;
+
+}
+.bg-footer
+{
+    background-color:#2F4F4F;
+    width: 100%;
+
+    
 }

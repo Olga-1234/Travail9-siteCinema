@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import "./components/NavBar/style.css";
 import img from "./components/imges/bg.png"
 import Header from './components/header';
+import Footer from './components/footer';
+
 
 const Api="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=6f82743b4851e8b71cb17f8d769a7941&page=1";
 const SearchApi="https://api.themoviedb.org/3/search/movie?api_key=6f82743b4851e8b71cb17f8d769a7941&query="
@@ -45,6 +47,7 @@ const handleSubmit=(event)=>{
       <div className="bg-movie-section">
       <Header/>
 
+
       <div className="album py-6">
     <div className="container">
 
@@ -55,7 +58,7 @@ const handleSubmit=(event)=>{
     </div>
     </div>
       </div>
-      
+      <Footer/>
 
     </div>
 
