@@ -60,3 +60,7 @@
 {
     background-color: #300E0F;
 }
+.card
+{
+    border: none !important;
+}

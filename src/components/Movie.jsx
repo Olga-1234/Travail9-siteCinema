@@ -23,7 +23,7 @@ const Movie = ({
     // </div>
     // </div>
     <>
-      <div className="col py-3">
+      <div className="col py-4">
         <div className="card shadow-sm">
           <div className="card-img">
             <img
