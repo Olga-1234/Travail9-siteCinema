@@ -3,8 +3,12 @@ import Movie from "./components/Movie";
 import Navbar from "./components/Navbar";
 import "./components/NavBar/style.css";
 import img from "./components/imges/bg.png"
-import Header from './components/header';
+
 import Footer from './components/footer';
+import {Redirect, Route, Switch} from "react-router-dom"
+import movie from './components/MoviesCategories/movie';
+import HeaderMovies from './components/MoviesCategories/headerMovies';
+
 
 
 
@@ -46,9 +50,10 @@ const handleSubmit=(event)=>{
       </div>
       
       <div className="bg-movie-section">
-      <Header/>
-
-
+      <HeaderMovies/>
+      <Switch>
+      <Route exact path="/" component={HeaderMovies}/>
+      </Switch>
       <div className="album py-6">
     <div className="container">
 
@@ -60,10 +65,7 @@ const handleSubmit=(event)=>{
     </div>
       </div>
       <Footer/>
-
     </div>
-
-
   );
 }
 

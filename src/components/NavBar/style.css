@@ -69,8 +69,13 @@
 .card
 {
     border: none !important;
-    box-shadow: 0 0 8px 3px #110102 !important;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
 
+}
+.card:hover
+{
+    box-shadow: 0 0 8px 3px #f4ea7b9c !important;
 }
 .bg-footer
 {
@@ -86,4 +91,8 @@
 .text-size-tv
 {
     font-size: 1.5rem;
+}
+.card-title
+{
+    font-size: 1rem;
 }
