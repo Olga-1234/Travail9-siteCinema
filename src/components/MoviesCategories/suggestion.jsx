@@ -4,7 +4,7 @@ const  Suggestion=()=> {
     
         return (
             <div>
-                <h1 className="text-light">SUGGESTIONS</h1>
+                <h1 className="text-light"></h1>
                 <CategorieMovies/>
             </div>
 
