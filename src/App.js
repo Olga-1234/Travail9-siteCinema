@@ -6,8 +6,10 @@ import img from "./components/imges/bg.png"
 
 import Footer from './components/footer';
 import {Redirect, Route, Switch} from "react-router-dom"
-import movie from './components/MoviesCategories/movie';
+
 import HeaderMovies from './components/MoviesCategories/headerMovies';
+import Home from './components/MoviesCategories/Home';
+import Suggestion from './components/MoviesCategories/suggestion';
 
 
 
@@ -52,7 +54,9 @@ const handleSubmit=(event)=>{
       <div className="bg-movie-section">
       <HeaderMovies/>
       <Switch>
-      <Route exact path="/" component={HeaderMovies}/>
+      <Route exact path="/" component={Home}/>
+      <Suggestion path="/suggestion" component={Suggestion}/>
+
       </Switch>
       <div className="album py-6">
     <div className="container">
