@@ -42,9 +42,13 @@ const handleSubmit=(event)=>{
   .then(data=>{
     setMovies(data.results);
   })},[])
-  return (
-
-    <div>
+  
+    if (movies.length === 0) {
+      return <h1>Chargement...</h1>;
+    }
+    else {
+      return(
+        <div>
       <section id="first-page">
 
       <Navbar handleSubmit={handleSubmit} onSearch={onSearch} search={searchItem} />
@@ -73,7 +77,39 @@ const handleSubmit=(event)=>{
       <Footer/>
       </section>
     </div>
-  );
+      )
+    }
+
+    // <div>
+    //   <section id="first-page">
+
+    //   <Navbar handleSubmit={handleSubmit} onSearch={onSearch} search={searchItem} />
+
+    //   <div className="contenair">
+    //   <img src={img} className="img-fluid"  alt="..."></img>
+    //   </div>
+      
+    //   <div className="bg-movie-section">
+    //   <HeaderMovies/>
+    //   <Switch>
+    //   {/* <Route exact path="/" component={Home}/> */}
+    //   <Route exact path="/suggestion" component={Suggestion}/>
+
+    //   </Switch>
+    //   <div className="album py-6">
+    // <div className="container">
+
+    //   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+    //     {movies.length>0 && movies.map(movie=>
+    //   <Movie key={movie.id} {...movie}/>)}
+    //   </div>
+    // </div>
+    // </div>
+    //   </div>
+    //   <Footer/>
+    //   </section>
+    // </div>
+  
 }
 
 export default App;

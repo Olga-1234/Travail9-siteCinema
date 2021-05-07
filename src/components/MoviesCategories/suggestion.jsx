@@ -18,9 +18,14 @@ const Suggestion = () => {
   return (
     <div>
       <h1 className="text-light"> </h1>
+      <div className="container text-light">
+     <div className="row justify-content-md-center">
+
       {CategoMovies.map(CategoMovie => 
         <CategorieMovies key={CategoMovie.id} {...CategoMovie} />
       )}
+      </div>
+      </div>
     </div>
   );
 };
