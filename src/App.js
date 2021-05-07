@@ -3,12 +3,11 @@ import Movie from "./components/Movie";
 import Navbar from "./components/Navbar";
 import "./components/NavBar/style.css";
 import img from "./components/imges/bg.png"
-
 import Footer from './components/footer';
-import {Redirect, Route, Switch} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
 
 import HeaderMovies from './components/MoviesCategories/headerMovies';
-import Home from './components/MoviesCategories/Home';
+
 import Suggestion from './components/MoviesCategories/suggestion';
 
 
@@ -18,10 +17,12 @@ const Api="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&a
 const SearchApi="https://api.themoviedb.org/3/search/movie?api_key=6f82743b4851e8b71cb17f8d769a7941&query="
 
 
+
 const App = ()=> {
 
   const [movies, setMovies]=useState([]);
   const [searchItem, setSearchItem]=useState("")
+  
   const onSearch =(event)=>{
     setSearchItem(event.target.value)
   }
@@ -44,6 +45,7 @@ const handleSubmit=(event)=>{
   return (
 
     <div>
+      <section id="first-page">
 
       <Navbar handleSubmit={handleSubmit} onSearch={onSearch} search={searchItem} />
 
@@ -54,8 +56,8 @@ const handleSubmit=(event)=>{
       <div className="bg-movie-section">
       <HeaderMovies/>
       <Switch>
-      <Route exact path="/" component={Home}/>
-      <Suggestion path="/suggestion" component={Suggestion}/>
+      {/* <Route exact path="/" component={Home}/> */}
+      <Route exact path="/suggestion" component={Suggestion}/>
 
       </Switch>
       <div className="album py-6">
@@ -69,6 +71,7 @@ const handleSubmit=(event)=>{
     </div>
       </div>
       <Footer/>
+      </section>
     </div>
   );
 }

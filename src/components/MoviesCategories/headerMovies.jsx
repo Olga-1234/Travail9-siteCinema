@@ -5,8 +5,10 @@ const   HeaderMovies=()=> {
     return(
         <>
         <div className="container ">
-        <p><Link to="/">ACCEUIL</Link></p>
-        <p><Link to="/suggestion">SUGGESTIONS</Link></p>
+            
+           
+            <a href="#first-page"><p className="text-light py-3">ACCUEIL</p> </a>
+        <p className="text-light "><Link to="/suggestion">SUGGESTIONS</Link></p>
             
         </div>
         </>
