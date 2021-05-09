@@ -100,3 +100,12 @@ a
 {
     text-decoration: none !important;
 }
+.left
+{
+    padding-left: 50% !important;
+}
+.color-text
+{
+    color: #F4E97B !important;
+    font-weight: 1000!important;
+}

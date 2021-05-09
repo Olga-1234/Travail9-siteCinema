@@ -1,7 +1,7 @@
 import React from "react";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-const Movie = ({
+const MovieImg = ({
   title,
   overview,
   poster_path,
@@ -32,4 +32,4 @@ const Movie = ({
     </>
   );
 };
-export default Movie;
+export default MovieImg;

@@ -19,6 +19,7 @@ const Form = ({handleSubmit,search,onSearch}) => {
       </form> */}
 
     <form class="d-flex" onSubmit={handleSubmit}>
+      
     <input
           className="form-control me-2"
           id="search"
