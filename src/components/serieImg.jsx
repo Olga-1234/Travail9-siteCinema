@@ -1,5 +1,7 @@
 import React from "react";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
+// https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-U
+// https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=<<api_key>>&language=en-US
 
 const SerieImg = ({
   name,

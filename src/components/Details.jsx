@@ -14,7 +14,6 @@ const Details=()=>  {
            
             <a href="#first-page"><p className="text-light py-3">ACCUEIL</p> </a>
 </div>
-
             </div>
         )
 }

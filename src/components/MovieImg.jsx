@@ -1,6 +1,8 @@
 import React from "react";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
+
+
 const MovieImg = ({
   title,
   overview,
@@ -14,6 +16,7 @@ const MovieImg = ({
   return (
    
     <>
+    
       <div className="col py-4">
         <div className="card shadow-sm">
           <div className="card-img">
@@ -29,6 +32,7 @@ const MovieImg = ({
           </div>
         </div>
       </div>
+      
     </>
   );
 };

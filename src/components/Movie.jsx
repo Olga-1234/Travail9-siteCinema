@@ -1,13 +1,13 @@
 
-// import "./components/NavBar/style.css";
 import img from "./imges/bg.png";
-// import Footer from "./components/footer";
-import { Route, Switch } from "react-router-dom";
+
 import HeaderMovies from "./MoviesCategories/headerMovies";
 
 import MovieImg from "./MovieImg";
 import React,{useState, useEffect} from 'react';
 import Navbar from "./Navbar";
+import {Link} from "react-router-dom"
+
 
 
 
@@ -64,7 +64,7 @@ const Movies =()=> {
             <HeaderMovies />
             
             <div className="album py-6">
-
+            <Link to="/Details">
               <div className="container">
               
               <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
@@ -75,7 +75,9 @@ const Movies =()=> {
       </div>
 
               </div>
+              </Link>
             </div>
+            
           </div>
 
                 
