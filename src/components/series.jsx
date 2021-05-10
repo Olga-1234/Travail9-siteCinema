@@ -2,7 +2,7 @@ import SerieImg from "./serieImg";
 import React,{useState, useEffect} from 'react';
 import Navbar from "./Navbar";
 import "./NavBar/style.css";
-import img from "./imges/bg.png";
+import img from "./imges/bgd.jpg";
 import { Route, Switch } from "react-router-dom";
 import HeaderMovies from "./MoviesCategories/headerMovies";
 import Suggestion from "./MoviesCategories/suggestion";
@@ -41,7 +41,6 @@ const Series = () => {
             handleSubmit={handleSubmit}
             onSearch={onSearch}
             search={searchItemSerie}
-            // onClickMovie={handelClickMovie}
 
           />
 
@@ -51,9 +50,7 @@ const Series = () => {
 
           <div className="bg-movie-section">
             <HeaderMovies />
-            <Switch>
-              <Route exact path="/suggestion" component={Suggestion} />
-            </Switch>
+            
             <div className="album py-6">
 
               <div className="container">

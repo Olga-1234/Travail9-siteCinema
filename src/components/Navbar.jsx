@@ -6,15 +6,15 @@ const Navbar = ({handleSubmit, onSearch, search}) => {
   return (
     <>
       
-      <nav class="navbar navbar-light bg-navBar fixed-top">
-  <div class="container-fluid">
-    <strong class="navbar-brand text-light text-bold">
+      <nav className="navbar navbar-light bg-navBar fixed-top">
+  <div className="container-fluid">
+    <strong className="navbar-brand text-light text-bold">
     TangilaFilm.<span className="navbar-tv">Tv</span>
     </strong>
     
     <div className="left">
       <Link to="/" className="btn btn-outline  color-text"  >FILMS</Link>
-      <Link to="/series" className="btn btn-outline color-text" >SERIES</Link>
+      <Link to="/series" className="btn btn-outline  color-text" >SERIES</Link>
       </div>
       
     

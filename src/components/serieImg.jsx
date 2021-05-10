@@ -2,7 +2,7 @@ import React from "react";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
 const SerieImg = ({
-  title,
+  name,
   overview,
   poster_path,
   vote_average,
@@ -24,7 +24,7 @@ const SerieImg = ({
           </div>
 
           <div className="card-body">
-            <h5 className="card-title">{title}</h5>
+            <h5 className="card-title">{name}</h5>
             <p className="card-text">{popularity}</p>
           </div>
         </div>

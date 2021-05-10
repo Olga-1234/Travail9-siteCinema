@@ -4,7 +4,7 @@ import img from "./imges/bg.png";
 // import Footer from "./components/footer";
 import { Route, Switch } from "react-router-dom";
 import HeaderMovies from "./MoviesCategories/headerMovies";
-import Suggestion from "./MoviesCategories/suggestion";
+
 import MovieImg from "./MovieImg";
 import React,{useState, useEffect} from 'react';
 import Navbar from "./Navbar";
@@ -23,24 +23,7 @@ const Movies =()=> {
       setSearchItem(event.target.value);
      };
     
-      // const handleSubmit = (event) => {
-      //   event.preventDefault();
-      //   {
-      //     fetch(SearchApi + searchItem)
-      //       .then((response) => response.json())
-      //       .then((data) => {
-      //         setMovies(data.results);
-      //       });
-      //   }
-      // };
     
-      // useEffect(() => {
-      //   fetch(Api)
-      //     .then((response) => response.json())
-      //     .then((data) => {
-      //       setMovies(data.results);
-      //     });
-      // }, []);
     
     
       const handleSubmit = (event) => {
@@ -79,9 +62,7 @@ const Movies =()=> {
 
           <div className="bg-movie-section">
             <HeaderMovies />
-            <Switch>
-              <Route exact path="/suggestion" component={Suggestion} />
-            </Switch>
+            
             <div className="album py-6">
 
               <div className="container">
