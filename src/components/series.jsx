@@ -8,9 +8,25 @@ import HeaderMovies from "./MoviesCategories/headerMovies";
 import Suggestion from "./MoviesCategories/suggestion";
 
 const ApiSeries ="https://api.themoviedb.org/3/discover/tv?sort_by=popularity.desc&api_key=6f82743b4851e8b71cb17f8d769a7941&language=en-US&page=1";
-
+const SearchApiSeries ="https://api.themoviedb.org/3/search/tv?api_key=6f82743b4851e8b71cb17f8d769a7941&query=";
 const Series = () => {
   const [series, setSeries] = useState([]);
+  const [searchItemSerie, setSearchItemSerie] = useState("");
+
+  const onSearch = (event) => {
+    setSearchItemSerie(event.target.value);
+   };
+   const handleSubmit = (event) => {
+    event.preventDefault();
+    {
+      fetch(SearchApiSeries + searchItemSerie)
+        .then((response) => response.json())
+        .then((data) => {
+          setSeries(data.results);
+        });
+    }
+  };
+
   useEffect(() => {
     fetch(ApiSeries)
       .then((response) => response.json())
@@ -22,9 +38,9 @@ const Series = () => {
   return (
     <div>
       <Navbar
-            // handleSubmit={handleSubmit}
-            // onSearch={onSearch}
-            // search={searchItem}
+            handleSubmit={handleSubmit}
+            onSearch={onSearch}
+            search={searchItemSerie}
             // onClickMovie={handelClickMovie}
 
           />

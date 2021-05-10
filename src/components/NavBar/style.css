@@ -109,3 +109,7 @@ a
     color: #F4E97B !important;
     font-weight: 1000!important;
 }
+link{
+    text-decoration: none !important;
+    border: none i !important;
+}

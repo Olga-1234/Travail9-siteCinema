@@ -69,7 +69,7 @@ const Movies =()=> {
             handleSubmit={handleSubmit}
             onSearch={onSearch}
             search={searchItem}
-            // onClickMovie={handelClickMovie}
+            
 
           />
 
