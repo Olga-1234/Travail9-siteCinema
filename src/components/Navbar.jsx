@@ -1,8 +1,8 @@
 import Form from "./form";
-import { Link } from "react-router-dom"
 
 
-const Navbar = ({handleSubmit, onSearch, search}) => {
+
+const Navbar = ({handleSubmit, onSearch, search, onClickSerie,onClickMovie}) => {
   return (
     <>
       
@@ -13,8 +13,8 @@ const Navbar = ({handleSubmit, onSearch, search}) => {
     </strong>
     
     <div className="left">
-      <p className="btn btn-outline text-light color-text" type="submit">FILMS</p>
-      <p className="btn btn-outline text-light color-text"><Link to="/serie">SERIES</Link></p>
+      <p className="btn btn-outline text-light color-text" onClick={onClickMovie}>FILMS</p>
+      <p className="btn btn-outline text-light color-text" onClick={onClickSerie}>SERIES</p>
       </div>
       
     
