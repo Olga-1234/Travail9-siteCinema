@@ -1,7 +1,7 @@
 import React from "react";
+import {Link} from "react-router-dom"
+
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
-
-
 
 const MovieImg = ({
   title,
@@ -19,6 +19,7 @@ const MovieImg = ({
     
       <div className="col py-4">
         <div className="card shadow-sm">
+        <Link to={`/Details/${id}`}>
           <div className="card-img">
             <img
               className=""
@@ -30,8 +31,10 @@ const MovieImg = ({
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{popularity}</p>
           </div>
+          </Link>
         </div>
       </div>
+      
       
     </>
   );

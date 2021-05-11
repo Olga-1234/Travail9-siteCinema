@@ -11,13 +11,10 @@ const Navbar = ({handleSubmit, onSearch, search}) => {
     <strong className="navbar-brand text-light text-bold">
     TangilaFilm.<span className="navbar-tv">Tv</span>
     </strong>
-    
     <div className="left">
-      <Link to="/" className="btn btn-outline  color-text"  >FILMS</Link>
-      <Link to="/series" className="btn btn-outline  color-text" >SERIES</Link>
+      <Link to="/" className="  color-text"  >FILMS</Link>
+      <Link to="/series" className=" color-text" >SERIES</Link>
       </div>
-      
-    
     <Form handleSubmit={handleSubmit} onSearch={onSearch} search={search} className="navbar-form"/>
   </div>
 </nav>

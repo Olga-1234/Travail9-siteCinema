@@ -18,9 +18,9 @@ const App = () => {
           <Route exact path="/" component={Movies}></Route>
           <Route path="/series" component={Series}></Route>
   
-         <Route path="/Details" component={Details}></Route> 
+         <Route path="/Details/:Id" component={Details}></Route> 
 
-          
+
 
           <Footer />
         </div>

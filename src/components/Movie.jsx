@@ -6,7 +6,6 @@ import Pagination from "react-js-pagination";
 import MovieImg from "./MovieImg";
 import React,{useState, useEffect} from 'react';
 import Navbar from "./Navbar";
-import {Link} from "react-router-dom"
 
 
 
@@ -71,25 +70,22 @@ const Movies =()=> {
             <HeaderMovies />
             
             <div className="album py-6">
-            <Link to="/Details">
+            
               <div className="container">
-              
-              <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-        {movies.length>0 && movies.map(movie=>
-      <MovieImg key={movie.id} {...movie}/>)}
-          <Pagination
-          activePage={pageCurrent}
-          itemsCountPerPage={20}
-          totalItemsCount={totalPage}
-          pageRangeDisplayed={5}
-          onChange={handlePageChange}
-        />
-
-      
+                  <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+            {movies.length>0 && movies.map(movie=>
+            <MovieImg key={movie.id} {...movie}/>)}
+              <Pagination className="pagenation"
+              activePage={pageCurrent}
+              itemsCountPerPage={20}
+              totalItemsCount={totalPage}
+              pageRangeDisplayed={5}
+              onChange={handlePageChange}
+            />  
       </div>
-
+      
               </div>
-              </Link>
+            
             </div>
             
           </div>
