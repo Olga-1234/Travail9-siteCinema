@@ -4,7 +4,7 @@ const Form = ({handleSubmit,search,onSearch}) => {
     <div>
    
 
-    <form class="d-flex" onSubmit={handleSubmit}>
+    <form className="d-flex" onSubmit={handleSubmit}>
       
     <input
           className="form-control me-2"

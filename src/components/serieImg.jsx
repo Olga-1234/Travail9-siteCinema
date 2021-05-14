@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
-// https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-U
-// https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=<<api_key>>&language=en-US
+
 
 const SerieImg = ({
   name,
@@ -18,6 +18,9 @@ const SerieImg = ({
     <>
       <div className="col py-4">
         <div className="card shadow-sm">
+          
+        <Link to={`/detailsSeries/${id}`}>
+
           <div className="card-img">
             <img
               className=""
@@ -29,6 +32,7 @@ const SerieImg = ({
             <h5 className="card-title">{name}</h5>
             <p className="card-text">{popularity}</p>
           </div>
+          </Link>
         </div>
       </div>
     </>

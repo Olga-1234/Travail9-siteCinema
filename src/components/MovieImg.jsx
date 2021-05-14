@@ -11,7 +11,7 @@ const MovieImg = ({
   release_date,
   popularity,
   id,
-  original_language,
+  original_language,mediaType
 }) => {
   return (
    
@@ -19,7 +19,7 @@ const MovieImg = ({
     
       <div className="col py-4">
         <div className="card shadow-sm">
-        <Link to={`/Details/${id}`}>
+        <Link to={`/detailMovies/${id}`}>
           <div className="card-img">
             <img
               className=""

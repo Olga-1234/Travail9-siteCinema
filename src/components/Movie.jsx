@@ -1,25 +1,23 @@
 
 import img from "./imges/bg.png";
 
-import HeaderMovies from "./MoviesCategories/headerMovies";
+import HeaderMovies from "./Category/headerMovies";
 import Pagination from "react-js-pagination";
-import MovieImg from "./MovieImg";
+
 import React,{useState, useEffect} from 'react';
 import Navbar from "./Navbar";
-
-
-
-
-
+import ListOfCategories from "./Category/ListOfCategories";
+import MovieImg from "./MovieImg";
 
 const Movies =()=> {
     const [movies, setMovies]=useState([]);
     const [searchItem, setSearchItem] = useState("");
     const [pageCurrent, setPageCurrent] =useState(1);
     const [totalPage,setTotalPage]=useState(1)
+    const [genreId, setGenreId]=useState("")
 
-    console.log("page courant : ",pageCurrent);
-    const Api=`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=6f82743b4851e8b71cb17f8d769a7941&page=${pageCurrent}`;
+    
+    const Api=`https://api.themoviedb.org/3/discover/movie?api_key=6f82743b4851e8b71cb17f8d769a7941&language=fr-FR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate&page=${pageCurrent}`;
     const SearchApi ="https://api.themoviedb.org/3/search/movie?api_key=6f82743b4851e8b71cb17f8d769a7941&query=";
     const onSearch = (event) => {
       setSearchItem(event.target.value);
@@ -29,13 +27,11 @@ const Movies =()=> {
   
       const handleSubmit = (event) => {
         event.preventDefault();
-        {
           fetch(SearchApi + searchItem)
             .then((response) => response.json())
             .then((data) => {
               setMovies(data.results);
             });
-        }
       };
       const handlePageChange=(pageNumber)=>{
         setPageCurrent(pageNumber)
@@ -49,18 +45,22 @@ const Movies =()=> {
             setMovies(data.results);
             setTotalPage(data.total_pages)
           });
-      }, [pageCurrent]);
+          window.scrollTo(0,0);
+      }, [Api,genreId]);
+
+
+
+     const  onclickShowCategory=(id)=>{
+      setGenreId(id)
+
+     }
 
         return (
             <div>
-              <Navbar
-              
-            handleSubmit={handleSubmit}
-            onSearch={onSearch}
-            search={searchItem}
-            
-
-          />
+              <Navbar 
+              handleSubmit={handleSubmit}
+              onSearch={onSearch}
+              search={searchItem} />
 
           <div className="contenair">
             <img src={img} className="img-fluid" alt="..."></img>
@@ -68,13 +68,14 @@ const Movies =()=> {
 
           <div className="bg-movie-section">
             <HeaderMovies />
+            <ListOfCategories onclickShowCategory={onclickShowCategory} mediaType="movie"/>
             
             <div className="album py-6">
             
               <div className="container">
                   <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
             {movies.length>0 && movies.map(movie=>
-            <MovieImg key={movie.id} {...movie}/>)}
+            <MovieImg  key={movie.id} {...movie}/>)}
               <Pagination className="pagenation"
               activePage={pageCurrent}
               itemsCountPerPage={20}
