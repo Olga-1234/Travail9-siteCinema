@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CategorieMovies from "./CategoryItem";
+import Category from "./CategoryItem";
 
-const ListOfCategories = ({ onclickShowCategory, mediaType }) => {
+const ListCategories = ({ onclickShowCategory, mediaType }) => {
   const CategoryMoviesApi = `https://api.themoviedb.org/3/genre/${mediaType}/list?api_key=6f82743b4851e8b71cb17f8d769a7941&language=fr-FR`;
 
   const [categories, setCategories] = useState([]);
@@ -19,7 +19,7 @@ const ListOfCategories = ({ onclickShowCategory, mediaType }) => {
       <div className="container text-light">
         <div className="row justify-content-md-center">
           {categories.map((CategoMovie) => (
-            <CategorieMovies
+            <Category
               key={CategoMovie.id}
               {...CategoMovie}
               onclickShowCategory={onclickShowCategory}
@@ -31,4 +31,4 @@ const ListOfCategories = ({ onclickShowCategory, mediaType }) => {
   );
 };
 
-export default ListOfCategories;
+export default ListCategories;

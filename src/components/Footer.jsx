@@ -1,10 +1,10 @@
-import Loading from "react-loading";
+// import Loading from "react-loading";
 const Footer = () => {
   return (
     <footer className="bg-footer">
       <div className="container py-5">
         <div className="row container-fluid">
-          <Loading type="spin" color="orange"/>
+          {/* <Loading type="spin" color="orange"/> */}
           <div className="col-6 text-light">
             <p >Contact</p>
             <p >A propos</p>
@@ -73,7 +73,7 @@ const Footer = () => {
                 TangilaFilm.<span className="navbar-tv text-size-tv">Tv</span>
               </strong> <br/>
               Copyright © 2021 TangilaFilm.Tv. Tous les droits sont réservés. <br/>
-              Thème Design by <span className="navbar-tv">OMN</span>
+              Thème Design by <span className="color">OMN</span>
             </p>
           </div>
         </div>

@@ -1,13 +1,11 @@
 
 import "./style.css";
-
-import Footer from "./components/footer";
-
-import Movies from "./components/Movie";
-import Series from "./components/series";
+import Footer from "./components/Footer";
+import Movies from "./components/movies/Movie";
+import Series from "./components/series/Series";
 import {BrowserRouter, Route,Switch } from "react-router-dom";
-import DetailsMovies from "./components/detailMovies";
-import DetailsSeries from "./components/detailsSeries";
+import DetailsMovies from "./components/movies/DetailMovies";
+import DetailsSeries from "./components/series/DetailsSeries";
 
 const App = () => {
   
@@ -19,11 +17,8 @@ const App = () => {
           <Route path="/series" component={Series}></Route>
          <Route path="/detailMovies/:Id" component={DetailsMovies} ></Route> 
          <Route path="/detailsSeries/:Id" component={DetailsSeries}></Route>
-          </Switch>
-
-
-
-          <Footer />
+        </Switch>
+          <Footer/>
         </div>
         </BrowserRouter>
       )

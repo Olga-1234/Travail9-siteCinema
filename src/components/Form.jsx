@@ -10,7 +10,7 @@ const Form = ({handleSubmit,search,onSearch}) => {
           className="form-control me-2"
           id="search"
           type="search"
-          placeholder="Search"
+          placeholder="Recherche"
            value={search}
            onChange={onSearch}
         />

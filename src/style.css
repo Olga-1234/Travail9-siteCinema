@@ -24,6 +24,15 @@
     margin-top: 50px;
 
 }
+@media (max-width : 600px) {
+    .img-fluid {
+        margin-top: 100px;
+    }
+
+    .card-class {
+        margin-bottom: 5%;
+    }
+}
 
 .text-light {
     font-weight: 700;
@@ -36,22 +45,8 @@
     font-size: 1.5rem;
 }
 
-/* .all-card
+.card-img img
 {
-    display: flex;
-     padding-top: 20px;
-     display: flex;
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: space-evenly;
-}
-
-
-*/
-
-/* body and img card */
-
-.card-img img {
     object-fit: cover;
     object-position: top;
     background-repeat: no-repeat;
@@ -92,6 +87,7 @@
 
 .card-title {
     font-size: 1rem;
+    font-weight: bold !important;
 }
 
 a {
@@ -102,27 +98,24 @@ a {
     padding-left: 50% !important;
 }
 
+
 .color-text {
     color: #F4E97B !important;
     font-weight: 1000 !important;
     padding: .375rem .75rem;
-    
-    
 }
 
 
-.active{
-    border-bottom: 2px solid white;
+.active {
+    border-bottom: 1px solid #F4E97B;
     padding-bottom: 1px;
 }
+
 .rounded-img
 {
     width: 40%;
 }
-
-
-.pagination 
-{
+.pagination {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
@@ -133,39 +126,53 @@ a {
     width: 50%;
     margin: 3% auto;
 }
-.youtube-iframe
-{
+
+.youtube-iframe {
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
 }
-.py-1{
+
+.py-1 {
 
     margin-top: 5rem !important;
 }
-a 
-{
+
+a {
     text-decoration: none !important;
     color: black !important;
 }
-.title-genre{
-    border:  1px solid transparent ;
+
+.title-genre {
+    border: 1px solid transparent;
     background-color: transparent;
 }
-.title-genre:focus, .title-genre:hover
-{
-    border: 1px solid #fff;
+
+.title-genre:focus,
+.title-genre:hover {
+    border: 1px solid #F4E97B;
     border-radius: 12px;
 }
-.pg-active:hover
-{
-    border-bottom: 2px solid #fff;
+
+.pg-active:hover {
+    border-bottom: 1px solid #fff;
 }
-.pg-active::after{
+
+.pg-active::after {
     outline: #F4E97B;
 
 }
-.color-text-details
-{
+
+.color-text-details {
     font-weight: 600;
 }
-
+.color
+{
+    color: #F4E97B !important;
+}
+.fw-bold {
+    font-weight: 700 !important;
+}
+.f-family
+{
+    font-size: 1.4rem;
+}
