@@ -1,11 +1,8 @@
 
 import Loading from "react-loading";
-
 import img from "../imges/bg.png"
 import Pagination from "react-js-pagination";
-
 import React, { useState, useEffect } from "react";
-
 import ListCategories from "../Category/ListCategories";
 import Card from "../Card";
 import Header from "../Category/headerMovies";
@@ -66,7 +63,7 @@ const Movies = () => {
         <img src={img} className="img-fluid" alt="..."></img>
       </div>
 
-      <div className="bg-movie-section pb-5">
+      <div className="bg-movie-section pb-3">
 
         <Header/>
         {loading ? 

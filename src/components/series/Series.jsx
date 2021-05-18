@@ -61,7 +61,7 @@ const Series = () => {
         <img src={img} className="img-fluid" alt="..."></img>
       </div>
 
-      <div className="bg-movie-section">
+      <div className="bg-movie-section pb-3">
 
         <Header/>
         {loading ? 

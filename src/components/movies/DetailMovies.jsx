@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loading from "react-loading";
 
 const DetailsMovies = ({match}) => {
   const filmId = match.params.Id;
@@ -17,6 +18,7 @@ const DetailsMovies = ({match}) => {
       });
   }, [filmId]);
   const [videos, setVideos] = useState([]);
+  const [loading,setLoading] = useState(true)
 
   useEffect(() => {
     fetch(
@@ -25,6 +27,7 @@ const DetailsMovies = ({match}) => {
       .then((response) => response.json())
       .then((data) => {
         setVideos(data.results);
+    setLoading (false)
       });
     window.scrollTo(0, 0);
   }, [filmId]);
@@ -45,7 +48,12 @@ const DetailsMovies = ({match}) => {
 
       <div className="container py-5">
         <div clasName="d-flex justify-content-center">
-          <iframe
+
+            {
+              loading ? 
+        <Loading type="spin" color="orange" className="m-auto py-5 w-5"/>
+              :
+              <iframe
             className="col d-flex justify-content-center py-4"
             width="400"
             height="500"
@@ -57,6 +65,9 @@ const DetailsMovies = ({match}) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
+            }
+
+          
         </div>
 
         <div className="col"><span className="color-text-details">Titre:</span> {detailMovie.title}</div>
