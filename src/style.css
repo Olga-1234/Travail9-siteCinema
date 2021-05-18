@@ -56,7 +56,9 @@
 }
 
 .bg-movie-section {
-    background-color: #300E0F;
+    /* background-color: #300E0F; */
+    background: linear-gradient(180deg,#0e0102 , #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F);
+
 }
 
 .card {

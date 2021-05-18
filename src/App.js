@@ -1,11 +1,12 @@
 
 import "./style.css";
-import Footer from "./components/Footer";
+
 import Movies from "./components/movies/Movie";
 import Series from "./components/series/Series";
 import {BrowserRouter, Route,Switch } from "react-router-dom";
 import DetailsMovies from "./components/movies/DetailMovies";
 import DetailsSeries from "./components/series/DetailsSeries";
+import Footer from "./components/Footer";
 
 const App = () => {
   
