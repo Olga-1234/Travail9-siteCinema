@@ -56,7 +56,7 @@
 }
 
 .bg-movie-section {
-    /* background-color: #300E0F; */
+    
     background: linear-gradient(180deg,#0e0102 , #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F);
 
 }
@@ -127,6 +127,7 @@ a {
     letter-spacing: 0.3rem;
     width: 50%;
     margin: 3% auto;
+    padding-bottom: 3rem;
 }
 
 .youtube-iframe {

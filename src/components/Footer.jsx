@@ -1,10 +1,10 @@
-import Loading from "react-loading";
+
 const Footer = () => {
   return (
     <footer className="bg-footer">
       <div className="container py-5">
         <div className="row container-fluid">
-          <Loading type="spin" color="orange"/>
+        
           <div className="col-6 text-light">
             <p >Contact</p>
             <p >A propos</p>

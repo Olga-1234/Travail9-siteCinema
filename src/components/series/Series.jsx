@@ -5,6 +5,8 @@ import img from "../imges/bgd.jpg";
 import Pagination from "react-js-pagination";
 import ListCategories from "../Category/ListCategories";
 import Header from "../Category/headerMovies";
+import Loading from "react-loading";
+
 
 const Series = () => {
   const [series, setSeries] = useState([]);
@@ -12,6 +14,8 @@ const Series = () => {
   const [pageCurrent, setPageCurrent] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
   const [genreId, setGenreId] = useState("");
+  const [loading, setLoading] = useState(true);
+
 
   const ApiSeries = `https://api.themoviedb.org/3/discover/tv?api_key=6f82743b4851e8b71cb17f8d769a7941&language=fr-FR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate&page=${pageCurrent}`;
   const SearchApiSeries =
@@ -37,6 +41,7 @@ const Series = () => {
       .then((data) => {
         setSeries(data.results);
         setTotalPage(data.total_pages);
+        setLoading(false)
       });
     window.scrollTo(0, 0);
   }, [genreId, ApiSeries]);
@@ -57,9 +62,13 @@ const Series = () => {
       </div>
 
       <div className="bg-movie-section">
+
         <Header/>
-        
-        <ListCategories
+        {loading ? 
+        <Loading type="spin" color="orange" className="m-auto"/>
+        :
+        <>
+  <ListCategories
           onclickShowCategory={onclickShowCategory}
           mediaType="tv"
         />
@@ -81,6 +90,11 @@ const Series = () => {
             </div>
           </div>
         </div>
+
+        </>
+
+        }
+      
       </div>
     </div>
   );

@@ -41,14 +41,12 @@ const DetailsMovies = ({match}) => {
           <strong className="navbar-brand text-light text-bold">
             TangilaFilm.<span className="navbar-tv">Tv</span>
           </strong>
-        
-      
       </nav>
 
       <div className="container py-5">
         <div clasName="d-flex justify-content-center">
           <iframe
-            className=" col d-flex justify-content-center  py-4"
+            className="col d-flex justify-content-center py-4"
             width="400"
             height="500"
             src={`https://www.youtube.com/embed/${videos
