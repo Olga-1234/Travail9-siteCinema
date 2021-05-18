@@ -34,8 +34,8 @@ const DetailsMovies = ({ match }) => {
 
   return (
     <div>
-      <nav className="navbar  navbar-light bg-navBar fixed-top d-flex justify-content-start">
-        <button className="btn title-genre">
+            <nav className="navbar navbar-light bg-navBar fixed-top d-flex justify-content-center">
+            <button className="btn title-genre">
           <Link to="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
