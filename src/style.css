@@ -18,12 +18,11 @@
     font-size: 1rem;
 }
 
-
-
 .img-fluid {
     margin-top: 50px;
 
 }
+
 @media (max-width : 600px) {
     .img-fluid {
         margin-top: 100px;
@@ -45,8 +44,7 @@
     font-size: 1.5rem;
 }
 
-.card-img img
-{
+.card-img img {
     object-fit: cover;
     object-position: top;
     background-repeat: no-repeat;
@@ -56,8 +54,8 @@
 }
 
 .bg-movie-section {
-    
-    background: linear-gradient(180deg,#0e0102 , #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F);
+
+    background: linear-gradient(180deg, #0e0102, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F, #300E0F);
 
 }
 
@@ -113,10 +111,10 @@ a {
     padding-bottom: 1px;
 }
 
-.rounded-img
-{
+.rounded-img {
     width: 40%;
 }
+
 .pagination {
     justify-content: center;
     align-items: center;
@@ -168,15 +166,15 @@ a {
 .color-text-details {
     font-weight: 600;
 }
-.color
-{
+
+.color {
     color: #F4E97B !important;
 }
+
 .fw-bold {
     font-weight: 700 !important;
 }
-.f-family
-{
+
+.f-family {
     font-size: 1.4rem;
 }
-
